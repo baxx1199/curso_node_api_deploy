@@ -1,0 +1,37 @@
+### recuperar movies
+GET http://localhost:1234/movies
+
+### Recuperar una pelicula por id
+GET http://localhost:1234/movies/c8a7d63f-3b04-44d3-9d95-8782fd7dcfaf
+
+### Recuperar una pelicula por un genero
+GET http://localhost:1234/movies?title=ar
+
+### Crear una pelicula
+POST http://localhost:1234/movies
+Content-Type: application/json
+
+{
+    "title": "Spider-man: Into the Spider-Verse",
+    "year": 2018,
+    "director": "Bob Persichetti - Peter Ramsey",
+    "duration": 117,
+    "poster": "https://www.bing.com/images/search?view=detailV2&ccid=73uroAQQ&id=2CAC54BF830AD3D660D49A13F4CB8CF71B173CD3&thid=OIP.73uroAQQRUruFv0zrwuk_gHaKu&mediaurl=https%3a%2f%2fstatic.wikitide.net%2fallthetropeswiki%2fthumb%2fe%2fe3%2fSpider-Man_Into_The_Spider_Verse_Poster.jpg%2f640px-Spider-Man_Into_The_Spider_Verse_Poster.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.ef7baba00410454aee16fd33af0ba4fe%3frik%3d0zwXG%252feMy%252fQTmg%26pid%3dImgRaw%26r%3d0&exph=927&expw=640&q=spiderman+into+the+spider+verse&FORM=IRPRST&ck=82ABC81D8570C580D9CCB240E724F21E&selectedIndex=12&itb=0&ajaxhist=0&ajaxserp=0",
+    "genre": [
+      "Action",
+      "Animation",
+      "Superheros"
+    ],
+    "rate": 7
+  
+}
+
+### Actualizar una pelicula
+
+PATCH http://localhost:1234/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+Content-Type: application/json
+
+{
+    "year": 1994,
+    "duration": 254
+}
