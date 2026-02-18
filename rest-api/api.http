@@ -26,6 +26,9 @@ Content-Type: application/json
   
 }
 
+### Eliminar una pelicula
+DELETE http://localhost:1234/movies/8fb17ae1-bdfe-45e5-a871-4772d7e526b8
+
 ### Actualizar una pelicula
 
 PATCH http://localhost:1234/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
